@@ -22,7 +22,7 @@ class PigAnimal: public IAnimal
 public:
     PigAnimal(string p_name, int p_age):
         m_name(p_name),
-        m_age(m_age)
+        m_age(p_age)
     {}
     
     PigAnimal()
@@ -31,7 +31,7 @@ public:
         m_age = 0;
     }
     
-    ~PigAnimal();
+    //~PigAnimal() = default;
 
     void printInfo() override;
     void playWithOwner() override;

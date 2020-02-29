@@ -42,15 +42,15 @@ std::shared_ptr<IAnimal> ScAinmalFactory::createPet(AnimalType p_animalType, std
     {
         case AnimalType::Ecat:
         {
-            return std::make_shared<CatAnimal>(p_animalType, p_age);
+            return std::make_shared<CatAnimal>(p_name, p_age);
         }
         case AnimalType::Edog:
         {
-            return std::make_shared<DogAnimal>(p_animalType, p_age);
+            return std::make_shared<DogAnimal>(p_name, p_age);
         }
         case AnimalType::Epig:
         {
-            return std::make_shared<PigAnimal>(p_animalType, p_age);
+            return std::make_shared<PigAnimal>(p_name, p_age);
         }
         default:
             std::cout << "ERROR: AnimalType wrong." << std::endl;

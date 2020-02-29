@@ -17,21 +17,21 @@ namespace Sc
 
 using namespace std;
 
-class DogAnimal: public IAnimal
+class CatAnimal: public IAnimal
 {
 public:
-    DogAnimal(string p_name, int p_age):
+    CatAnimal(string p_name, int p_age):
         m_name(p_name),
-        m_age(m_age)
+        m_age(p_age)
     {}
-    
-    DogAnimal()
+
+    CatAnimal()
     {
         m_name = "No body";
         m_age = 0;
     }
-    
-    ~DogAnimal();
+
+    //~CatAnimal() = default;
 
     void printInfo() override;
     void playWithOwner() override;
@@ -41,14 +41,14 @@ private:
     int m_age;
 };
 
-void DogAnimal::printInfo()
+void CatAnimal::printInfo()
 {
-    std::cout << "Dog animal, name is " << m_name << ", age is " << m_age << std::endl;
+    std::cout << "Cat animal, name is " << m_name << ", age is " << m_age << std::endl;
 }
 
-void DogAnimal::playWithOwner()
+void CatAnimal::playWithOwner()
 {
-    std::cout << "Dog(" << m_name << ") is playing with owner." << std::endl;
+    std::cout << "Cat(" << m_name << ") is playing with owner." << std::endl;
 }
 
 }
