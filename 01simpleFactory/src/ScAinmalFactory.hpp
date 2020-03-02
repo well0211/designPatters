@@ -27,16 +27,16 @@ enum class AnimalType
 };
 
 
-class ScAinmalFactory
+class AinmalFactory
 {
 public:
-    ScAinmalFactory() = default;
-    ~ScAinmalFactory() = default;
+    AinmalFactory() = default;
+    ~AinmalFactory() = default;
 
     std::shared_ptr<IAnimal> createPet(AnimalType p_animalType, std::string p_name, int p_age);
 };
 
-std::shared_ptr<IAnimal> ScAinmalFactory::createPet(AnimalType p_animalType, std::string p_name, int p_age)
+std::shared_ptr<IAnimal> AinmalFactory::createPet(AnimalType p_animalType, std::string p_name, int p_age)
 {
     switch (p_animalType)
     {

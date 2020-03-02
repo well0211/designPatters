@@ -15,7 +15,7 @@
 
 int main()
 {
-    Sc::ScAinmalFactory l_aninmalFactory;
+    Sc::AinmalFactory l_aninmalFactory;
 
     std::shared_ptr<Sc::IAnimal> l_animal1 = l_aninmalFactory.createPet(Sc::AnimalType::Ecat, "Maomi", 2);
     std::shared_ptr<Sc::IAnimal> l_animal2 = l_aninmalFactory.createPet(Sc::AnimalType::Edog, "Wangwang", 3);
