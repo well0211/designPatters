@@ -9,11 +9,8 @@
 ***************************************************************************************************/
 
 #include <memory>
-#include "ScIFactory.hpp"
-#include "ScIBall.hpp"
-#include "ScBasketballFactory.hpp"
-#include "ScFootballFactory.hpp"
-#include "ScVolleyballFactory.hpp"
+#include "ScBall.hpp"
+#include "ScBallFactory.hpp"
 
 int main()
 {

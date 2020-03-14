@@ -7,14 +7,12 @@
 
 * copyright (c) 2020 WELL. All rights reserved
 ***************************************************************************************************/
+#pragma once
 
 #include <string>
 #include <iostream>
 #include <memory>
-#include "ScIAnimal.hpp"
-#include "ScCatAnimal.hpp"
-#include "ScDogAnimal.hpp"
-#include "ScPigAnimal.hpp"
+#include "ScAnimal.hpp"
 
 namespace Sc
 {

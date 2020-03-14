@@ -9,7 +9,7 @@
 ***************************************************************************************************/
 
 #include <memory>
-#include "ScIAnimal.hpp"
+#include "ScAnimal.hpp"
 #include "ScAinmalFactory.hpp"
 
 
