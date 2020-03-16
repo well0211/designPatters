@@ -24,20 +24,19 @@ public:
     IPrototypePaper() = default;
     virtual ~IPrototypePaper() = default;
 
-    std::shared_ptr<IPrototypePaper> shallowClone() = 0;
-    std::shared_ptr<IPrototypePaper> deepClone() = 0;
+    virtual IPrototypePaper* clone() = 0;
 };
 
 class Paper: public IPrototypePaper
 {
 public:
-    Paper() = default;
     ~Paper() =  default; 
+    Paper(){}
 
-    Paper(string p_name, int p_id, std::shared_ptr<string> p_answer)
+    Paper(string p_name, int p_id, string * p_answer)
     {
-        m_id = p_name;
-        m_name = p_id;
+        m_name = p_name;
+        m_id = p_id;
         m_answer = p_answer;
     }
 
@@ -51,40 +50,30 @@ public:
         m_name = p_name;
     }
 
-    void setAnswer(std::shared_ptr<string> p_answer)
+    void setAnswer(string * p_answer)
     {
         m_answer = p_answer;
     }
 
     void printPaperInfo()
     {
-        std::cout << "Name: " << m_name << ", Id: " << m_id << ", Answer: " << m_answer << std::endl;
-    }
-
-    std::shared_ptr<Paper> shallowClone() override
-    {
-        auto l_paper = std::make_shared<Paper>();
-
-        l_paper->setId(m_id);
-        l_paper->setName(m_name);
-        l_paper->setAnswer(m_answer);
-        return l_paper;
+        std::cout << "Name: " << m_name << ", Id: " << m_id << ", Answer: " << *m_answer << std::endl;
     }
     
-    std::shared_ptr<Paper> deepClone() override
+    Paper* clone() override
     {
-        auto l_paper = std::make_shared<Paper>();
+        auto l_paper = new Paper();
         
         l_paper->setId(m_id);
         l_paper->setName(m_name);
-        l_paper->setAnswer(std::make_shared<string>(*m_answer));
+        l_paper->setAnswer(m_answer);
         return l_paper;
     }
 
 private:
     int m_id;
     string m_name;
-    std::shared_ptr<string> m_answer;
+    string * m_answer;
 };
 
 }//end Sc
