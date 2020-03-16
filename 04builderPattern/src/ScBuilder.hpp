@@ -25,7 +25,7 @@ public:
     virtual ~IBuilder() =  default; 
 
     virtual void buildHouse() = 0;
-    virtual std::share_ptr<House> getHouse() = 0;
+    virtual std::shared_ptr<House> getHouse() = 0;
 
 private:
     virtual void setBuilder() = 0;
@@ -50,7 +50,7 @@ public:
         buildWall();
         buildRoof();
     }
-    std::share_ptr<House> getHouse() override
+    std::shared_ptr<House> getHouse() override
     {
         return m_house;
     }
@@ -73,7 +73,7 @@ private:
         m_house->setRoof("Roof from HengDa.");
     }
 
-    std::share_ptr<House> m_house;    
+    std::shared_ptr<House> m_house;    
 };
 
 class BuilderB: public IBuilder
@@ -92,7 +92,7 @@ public:
         buildWall();
         buildRoof();
     }
-    std::share_ptr<House> getHouse() override
+    std::shared_ptr<House> getHouse() override
     {
         return m_house;
     }
@@ -115,7 +115,7 @@ private:
         m_house->setRoof("Roof from Biguiyuan.");
     }
 
-    std::share_ptr<House> m_house;    
+    std::shared_ptr<House> m_house;    
 };
 
 

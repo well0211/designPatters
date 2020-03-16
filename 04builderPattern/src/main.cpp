@@ -20,8 +20,8 @@ int main()
 
     l_builder1->buildHouse();
     l_builder2->buildHouse();
-    std::share_ptr<House> l_house1 l_builder1->getHouse();
-    std::share_ptr<House> l_house2 l_builder2->getHouse();
+    std::shared_ptr<Sc::House> l_house1 = l_builder1->getHouse();
+    std::shared_ptr<Sc::House> l_house2 = l_builder2->getHouse();
 
     l_house1->getHouseInfo();
     l_house2->getHouseInfo();

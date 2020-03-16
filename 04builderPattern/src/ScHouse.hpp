@@ -11,6 +11,7 @@
 
 #include <memory>
 #include <string>
+#include <iostream>
 
 namespace Sc
 {
@@ -46,9 +47,9 @@ public:
     void getHouseInfo()
     {
         std::cout << "House from: " << m_builder << std::endl;
-        std::cout << m_floor << std::endl;
-        std::cout << m_wall << std::endl;
-        std::cout << m_roof << std::endl;
+        std::cout << "    " << m_floor << std::endl;
+        std::cout << "    " << m_wall << std::endl;
+        std::cout << "    " << m_roof << std::endl;
     }
 
 private:
